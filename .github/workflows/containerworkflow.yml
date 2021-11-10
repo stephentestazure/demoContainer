@@ -35,6 +35,8 @@ jobs:
 
       needs: build-deploy-image
           
+      environment: PROD
+
       #env:
         #NAMESPACE: dummy
       
