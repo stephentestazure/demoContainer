@@ -11,7 +11,7 @@ jobs:
     build-deploy-image:
         
         runs-on: ubuntu-latest
-        
+      
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
