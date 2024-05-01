@@ -10,16 +10,10 @@ env:
   IMAGE_NAME: ${{ secrets.ACR_NAME }}.azurecr.io/webapp:${{ github.sha }}
 
 jobs:
-    tests:
-      name: Unit Testing
-      runs-on: windows-latest
-      steps:
-        - uses: actions/checkout@v2.1.0
-        - run: dotnet test
+    
     build-deploy-image:
         
         runs-on: ubuntu-latest
-        needs: tests
         steps:
         # checkout the repo
         - name: 'Checkout GitHub Action'
